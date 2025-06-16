@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #ff5945;
+    --background: linear-gradient(135deg, #1e3c72, #2a5298);
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+}
+
+#password-generator {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto;
+    backdrop-filter: blur(8px);
+}
+
+#password {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#result {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+#copy-button {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#copy-button:hover {
+    background: #e1482e;
+}
+
+label, select, output {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+input[type=range] {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+#option {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#option label {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#option input {
+    margin-right: 0.5rem;
+}
+
+#generate-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#generate-button:hover {
+    background-color: #e1482e;
+}
+
+#history {
+    list-style: none;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+#history li {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: none;
+}
+
+@media screen and (max-width: 480px) {
+    #password-generator {
+        padding: 1rem;
+    }
+}

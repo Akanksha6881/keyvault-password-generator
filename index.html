@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>KeyVault Password Generator</h1>
+    </header>
+
+    <main id="password-generator">
+        <div id="password">
+            <input type="text" id="result" value="password" readonly>
+            <button id="copy-button">COPY</button>
+        </div>
+
+        <label for="password-length">Password Length: </label>
+        <input type="range" min="8" max="32" value="8" name="password-length" id="password-length" oninput="this.nextElementSibling.value=this.value">
+        <output>8</output>
+
+        <div id="option">
+            <label><input type="checkbox" id="lowercase-option" checked><span>Lower(a-z)</span></label>
+            <label><input type="checkbox" id="uppercase-option"><span>Upper(A-Z)</span></label>
+            <label><input type="checkbox" id="number-option"><span>Number(0-9)</span></label>
+            <label><input type="checkbox" id="special-option"><span>Symbol(!@#$%)</span></label>
+        </div>
+
+        <button id="generate-button">GENERATE</button>
+
+        <div>
+            <select id="generation-mode">
+                <option value="default">Standard</option>
+                <option value="pronounceable">Pronounceable</option>
+                <option value="passphrase">Passphrase</option>
+                <option value="superhero">Superhero Style</option>
+                <option value="anime">Anime Theme</option>
+            </select>
+        </div>
+
+        <ul id="history"></ul>
+        <audio id="sound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KeyVault | All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
